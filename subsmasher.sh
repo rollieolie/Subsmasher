@@ -32,17 +32,17 @@ certdata(){
 		echo " Lets do some amass!!I know why?? it takes to long but I just like it "
 		echo "-------------------------------------------------------------------------------- "
 		echo
-		am=$(amass intel -whois -d $1 | tee rawdata/$1-amass.txt)
+		am=$(amass intel -whois -d $1 | tee rawdata/$1-am.txt)
 		echo
 		echo "Next Subfinder "
 		echo "------------------- "
 		echo
-		sub=$(subfinder -d $1 -o rawdata/$1-subfinder.txt)
+		sub=$(subfinder -d $1 -o rawdata/$1-sub.txt)
 		echo
 		echo "And now Sublister!! "
 		echo "---------------------- "
 		echo
-		subl=$(python ~/tools/Sublist3r/sublist3r.py -d $1 -o rawdata/$1-sublist3r.txt)
+		subl=$(python ~/tools/Sublist3r/sublist3r.py -d $1 -o rawdata/$1-subl.txt)
 		#echo "$crtsh"
 		#echo "$certspotter"
 		#echo "$digicert"
